@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-				git branch: 'master', credentialsId: 'aa7ce681-cf84-4bb1-a1a6-a7012789b2ba', url: 'https://github.com/yongyongjiejie/simple-java-maven-app'
+				git branch: 'test', credentialsId: 'b2f1fcd4-6c85-4de0-be24-65b88d196146', url: 'https://github.com/yongyongjiejie/simple-java-maven-app'
 			}
 		}
 	}	
