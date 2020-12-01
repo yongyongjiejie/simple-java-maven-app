@@ -13,8 +13,11 @@ pipeline {
         	}
 	}	
 	post {
-		success {
-			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
-		}
-	}
+        	always{
+            		junit testResults: 'logs/unitreport.xml'
+        	}
+        	success {
+            		dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+        	}
+    	}
 }
